@@ -1,0 +1,13 @@
+conda info --envs
+conda activate carlaAir
+python -m pip install --no-build-isolation airsim
+python -m pip install --no-build-isolation pygame
+python -m pip install --no-build-isolation carla
+
+
+# Download the repo from huggingface.
+# Copy CarlaAir.sh to github repo
+# Copy Engine folder to github repo -> cp -r Engine/ /opt/CarlaAir/
+cp -r Engine/ /opt/CarlaAir/
+python -m pip install carla-0.9.15-cp310-cp310-manylinux_2_27_x86_64.whl 
+
