@@ -11,3 +11,5 @@ python -m pip install --no-build-isolation carla
 cp -r Engine/ /opt/CarlaAir/
 python -m pip install carla-0.9.15-cp310-cp310-manylinux_2_27_x86_64.whl 
 
+for env in $(conda env list | grep -v '^#' | awk '{print $1}'); do echo -e "\n=== Environment: $env ==="; conda list -n $env; done
+
